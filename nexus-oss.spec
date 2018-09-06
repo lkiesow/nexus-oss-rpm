@@ -3,11 +3,11 @@
 Name:      %{srcname}-oss
 Summary:   Maven software artifact manager
 Version:   2.14.9
-Release:   1%{?dist}
+Release:   2%{?dist}
 License:   EPL
 URL:       https://nexus.sonatype.org/
-Source0:   http://sonatype-download.global.ssl.fastly.net/%{srcname}/oss/%{srcname}-%{version}-01-bundle.tar.gz
-Source1:   https://github.com/lkiesow/nexus-oss-rpm/blob/master/%{name}.service
+Source0:   https://sonatype-download.global.ssl.fastly.net/%{srcname}/oss/%{srcname}-%{version}-01-bundle.tar.gz
+Source1:   https://raw.githubusercontent.com/lkiesow/nexus-oss-rpm/master/nexus-oss.service/%{name}.service
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 # We only care for 64bit Linux
@@ -107,6 +107,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,nexus,nexus) %dir %{_localstatedir}/log/%{name}
 
 %changelog
+* Thu Sep 06 2018 Lars Kiesow <lkiesow@uos.de> - 2.14.9-2
+- Fixed packaging mistake
+
 * Thu Sep 06 2018 Lars Kiesow <lkiesow@uos.de> - 2.14.9-1
 - Update to 2.14.9
 
