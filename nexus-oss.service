@@ -1,0 +1,11 @@
+[Unit]
+Description=Maven software artifact manager
+After=local-fs.target
+After=network.target
+
+[Service]
+ExecStart=/usr/share/nexus-oss/bin/jsw/linux-x86-64/wrapper /etc/nexus-oss/wrapper/wrapper.conf wrapper.syslog.ident=nexus
+User=nexus
+
+[Install]
+WantedBy=multi-user.target
