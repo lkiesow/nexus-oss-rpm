@@ -2,7 +2,7 @@
 
 Name:      %{srcname}-oss
 Summary:   Maven software artifact manager
-Version:   2.14.10
+Version:   2.14.11
 Release:   1%{?dist}
 License:   EPL
 URL:       https://nexus.sonatype.org/
@@ -107,6 +107,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,nexus,nexus) %dir %{_localstatedir}/log/%{name}
 
 %changelog
+* Sat Dec 08 2018 Lars Kiesow <lkiesow@uos.de> - 2.14.11-1
+- Update to 2.14.11
+
 * Sat Sep 22 2018 Lars Kiesow <lkiesow@uos.de> - 2.14.10-1
 - Update to 2.14.10
 
