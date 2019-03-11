@@ -2,7 +2,7 @@
 
 Name:      %{srcname}-oss
 Summary:   Maven software artifact manager
-Version:   2.14.11
+Version:   2.14.12
 Release:   1%{?dist}
 License:   EPL
 URL:       https://nexus.sonatype.org/
